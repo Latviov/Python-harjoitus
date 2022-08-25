@@ -6,3 +6,4 @@ while num!="" :
 print(f"Pienin luku on: {min(lst)} \nSuurin luku on: {max(lst)} ")
     #if num!="" :
         #list.append(num)
+        #kääk
