@@ -8,3 +8,4 @@ if vuosi%4==0 :
         print("Ei karkausvuosi!")
 else :
     print("Ei karkausvuosi!")
+# vihtu
