@@ -13,4 +13,4 @@ kg=h/1000
 #kg=le*8.5
 loput= h-math.floor(kg)*1000
 #math.floor(kg)
-print(f"Massa nykyarvoilla: {kg:2.1f},{loput:2.2f}")
+print(f"Massa nykyarvoilla: {math.floor(kg)},{loput:0.2f}")
