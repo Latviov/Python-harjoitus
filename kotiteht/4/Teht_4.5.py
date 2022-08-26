@@ -10,3 +10,4 @@ while i>0 :
     i-= 1
 if i==0 and tunnus!="python" and salasana!="rules" :
         print("Pääsy evätty!")
+#tää toimii tosi hyvin
