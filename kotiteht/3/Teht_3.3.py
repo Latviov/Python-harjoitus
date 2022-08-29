@@ -2,7 +2,7 @@ print("Kirjota pienillä olin laiska tekee koodii")
 suku= input("Oletko mies vai nainen: ")
 
 
-if suku != "mies" or suku != "nainen" :
+if suku != "mies" and suku != "nainen" :
     raise SystemExit(print("Koita nyt edes"))
 hemo= float(input("Anna hemoglobiiniarvosi: "))
 if suku == "mies":
