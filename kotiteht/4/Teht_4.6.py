@@ -1,12 +1,12 @@
 import random
 
-INTERVAL = 1000
+#INTERVAL = 1000
 
 circle_points = 0
 square_points = 0
 
-x=(input("Syötä pisteiden määrä: "))
-for i in range(INTERVAL**2):
+x=int(input("Syötä pisteiden määrä: "))
+for i in range(x**2):
 
 	rand_x = random.uniform(-1, 1)
 	rand_y = random.uniform(-1, 1)
