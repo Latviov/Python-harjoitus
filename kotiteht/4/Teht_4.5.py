@@ -8,6 +8,6 @@ while i>0 :
         print("Tervetuloa!")
         break
     i-= 1
-if i==0 and tunnus!="python" and salasana!="rules" :
+if i==0 and tunnus!="python" or salasana!="rules" :
         print("Pääsy evätty!")
 #tää toimii tosi hyvin
