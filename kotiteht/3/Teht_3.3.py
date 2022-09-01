@@ -1,5 +1,5 @@
-print("Kirjota pienillä olin laiska tekee koodii")
 suku= input("Oletko mies vai nainen: ")
+suku=suku.lower()
 
 
 if suku != "mies" and suku != "nainen" :
