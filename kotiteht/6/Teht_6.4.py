@@ -12,3 +12,4 @@ while True:
     res = [eval(i) for i in x]
     listaus()
 print(f"Summa:{(listaus())}")
+print(res)

@@ -1,4 +1,3 @@
-import random
 x = int(input("Syötä luku: "))
 flag = False
 
