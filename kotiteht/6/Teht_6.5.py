@@ -1,9 +1,7 @@
 import random
 o=[]
-i=0
-n=10
 def remove_odd_elements():
-    for x in range(n):
+    for x in range(10):
         o.append(random.randint(1, 100))
     print(o)
     for i in o[:]:
