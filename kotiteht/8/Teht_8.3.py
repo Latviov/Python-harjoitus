@@ -10,7 +10,7 @@ yhteys = mysql.connector.connect(
          )
 
 def hae(lentoasema):
-    sql = "select latitude_deg, longtitude_deg from airport where ident = '\"" + lentoasema + "\"';"
+    sql = "select latitude_deg, longitude_deg from airport where ident = '" + lentoasema + "';"
     kursori = yhteys.cursor()
     kursori.execute(sql)
     tulos = kursori.fetchall()

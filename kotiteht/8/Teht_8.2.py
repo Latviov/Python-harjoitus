@@ -9,7 +9,7 @@ yhteys = mysql.connector.connect(
          )
 
 def hae(lentoasema):
-    sql = "select type, count(type) from airport where iso_country = '\"" + lentoasema + "\"' group by type order by count(type) asc;"
+    sql = "select type, count(type) from airport where iso_country = '" + lentoasema + "' group by type order by count(type) asc;"
     #print(sql)
     kursori = yhteys.cursor()
     kursori.execute(sql)

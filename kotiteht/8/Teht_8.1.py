@@ -9,7 +9,7 @@ yhteys = mysql.connector.connect(
          )
 
 def hae(lentoasema):
-    sql = "select name, municipality from airport where gps_code= '\"" + lentoasema + "\"';"
+    sql = "select name, municipality from airport where gps_code= '" + lentoasema + "';"
     #print(sql)
     kursori = yhteys.cursor()
     kursori.execute(sql)
