@@ -10,8 +10,15 @@ class auto:
 
     def kiihdytys(self):
         UusiAuto.atm=UusiAuto.atm+x
+        if UusiAuto.atm>UusiAuto.huippu:
+            UusiAuto.atm=142
         if UusiAuto.atm<0:
             UusiAuto.atm=0
+
+    def kuljettumatka(self):
+        tunti=3
+        UusiAuto.matka=UusiAuto.atm*tunti
+
 
 UusiAuto = auto("ABC-123", 142, 0, 0)
 
@@ -31,7 +38,7 @@ while kerrat >= 0:
         kerrat=0
         break
 
-
+UusiAuto.kuljettumatka()
 UusiAuto.tulostaAuto()
 x = -200
 auto.kiihdytys(x)

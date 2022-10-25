@@ -10,6 +10,8 @@ class auto:
 
     def kiihdytys(self):
         UusiAuto.atm=UusiAuto.atm+x
+        if UusiAuto.atm>UusiAuto.huippu:
+            UusiAuto.atm=142
         if UusiAuto.atm<0:
             UusiAuto.atm=0
 
