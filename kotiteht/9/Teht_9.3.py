@@ -17,7 +17,7 @@ class auto:
 
     def kuljettumatka(self):
         tunti=3
-        UusiAuto.matka=UusiAuto.atm*tunti
+        UusiAuto.matka=UusiAuto.matka+(UusiAuto.atm*tunti)
 
 
 UusiAuto = auto("ABC-123", 142, 0, 0)
