@@ -1,42 +1,41 @@
 import random
-class auto:
-    def __init__(self, rekkari, huippu, atm, matka):
-        self.rekkari = rekkari
-        self.huippu = random.randint(100, 200)
-        self.atm = atm
-        self.matka = matka
+class Car:
+    def __init__(self, license_number, top_speed):
+        self.license_number = license_number
+        self.top_speed = top_speed
+        self.speed = 0
+        self.travel_distance = 0
+        self.travel_hours = 0
+    def info(self):
+        print("Auton rekisteri numero", self.license_number, ","
+              , self.top_speed,"km/h maksiminopeus,", self.speed,"km/h nopeus,", self.travel_distance, "km kuljettu matka", self.travel_hours, "tuntia ajettu")
+    def accelerate(self, amount):
+        if 0 < self.speed + amount < self.top_speed:
+            self.speed = self.speed + amount
+        elif self.speed + amount <= 0:
+            self.speed = 0
+        else:
+            self.speed = self.top_speed
+    def traveling(self, amount):
+        self.travel_distance = self.travel_distance + (self.speed * amount)
+        self.travel_hours = self.travel_hours + amount
 
-    def tulostaAuto(self):
-        print(self.rekkari, self.huippu, self.atm, self.matka)
-
-    def kiihdytys(self):
-        y.atm= y.atm + x
-        if y.atm>y.huippu:
-            y.atm=y.huippu
-        if y.atm<0:
-            y.atm=0
-
-
-    def kuljettumatka(self):
-        tunti=1
-
-        y.matka= y.matka+(y.atm * tunti)
-
-
-pl=1
-autot=[]
-while pl <=10:
-    rekkari=f"ABC-{pl}"
-    #ky = random.randint(100, 200)
-    y=auto(rekkari,0,0,0)
-    y.tulostaAuto()
-    pl+=1
+def car_making():
+    cars = []
+    for i in range (1,10):
+        cars.append(Car("ABC-"+ str(i), 50))
+    #for car in cars:
+        #print(car.info())
+    return cars
 
 
-kisa=10000
+cars = car_making()
+race_length = 10000
 
-while y.matka<kisa:
-    x=random.randint(-10,15)
-    auto.kiihdytys(x)
-    auto.kuljettumatka(y)
-    auto.tulostaAuto(y)
+for car in cars:
+    while car.travel_distance < race_length:
+        random_speed = random.randint(-10,15)
+        Car.accelerate(car,random_speed)
+        Car.traveling(car,1)
+        if car.travel_distance >= race_length:
+            Car.info(car)
