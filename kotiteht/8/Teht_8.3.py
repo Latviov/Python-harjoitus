@@ -1,3 +1,4 @@
+from geopy.distance import geodesic
 import mysql.connector
 yhteys = mysql.connector.connect(
          host='127.0.0.1',
@@ -9,14 +10,16 @@ yhteys = mysql.connector.connect(
          )
 
 def hae(lentoasema):
-    sql = "select name, municipality from airport where gps_code= '" + lentoasema + "';"
-    #print(sql)
+    sql = "select latitude_deg, longitude_deg from airport where ident = '" + lentoasema + "';"
     kursori = yhteys.cursor()
     kursori.execute(sql)
     tulos = kursori.fetchall()
-    print(tulos)
+    return tulos
 
-
-x= input("Anna ICAO koodi: ")
+x=input("Anna ensimmäinen ICAO-koodi: ")
 x=x.upper()
 hae(x)
+y=input("Anna toinen ICAO-koodi: ")
+y=y.upper()
+hae(y)
+print(f"{geodesic(hae(x),hae(y)).km:0.2f} kilometriä välimatkaa")

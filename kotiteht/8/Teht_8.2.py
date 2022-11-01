@@ -9,14 +9,14 @@ yhteys = mysql.connector.connect(
          )
 
 def hae(lentoasema):
-    sql = "select name, municipality from airport where gps_code= '" + lentoasema + "';"
+    sql = "select type, count(type) from airport where iso_country = '" + lentoasema + "' group by type order by count(type) asc;"
     #print(sql)
     kursori = yhteys.cursor()
     kursori.execute(sql)
     tulos = kursori.fetchall()
-    print(tulos)
+    for i in tulos:
+        print(f"{i[0]}: {i[1]}")
 
-
-x= input("Anna ICAO koodi: ")
+x= input("Anna maan lyhenne: ")
 x=x.upper()
 hae(x)
