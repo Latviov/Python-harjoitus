@@ -3,24 +3,66 @@
     margin: auto;
 }
 
+head {
+    float: left;
+    top: 0;
+}
+
 header {
-    background-color: cadetblue;
+    background-color: dodgerblue;
+    font-size: xx-large;
+    position: relative;
 }
 
 nav {
-    background-color: burlywood;
+    background-color: #474E68;
+    position: absolute;
+    float: top;
+    width: 1150px;
+}
+
+nav img {
+    position: absolute;
+}
+
+nav h1 {
+    color: #ffffff;
+    float: left;
+    padding-left: 7rem;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #474E68;
+    padding: 0;
+    margin: 0;
+    font-size: larger;
+}
+
+li {
+    float: right;
+    width: 10rem;
+}
+
+li a {
+    background-color: #474E68;
+    color: floralwhite;
+    display: block;
+    text-align: center;
+    line-height: 3rem;
+    text-decoration: none;
 }
 
 main {
-    background-color: #9c9cac;
 }
 
 section {
-    background-color: gold;
+
 }
 
 article {
-    background-color: indianred;
+
 }
 
 aside {
