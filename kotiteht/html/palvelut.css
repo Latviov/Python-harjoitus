@@ -2,16 +2,17 @@
     width: 80%;
     margin: auto;
 }
-html{
-    font-family: "Comic Sans MS",  Sans-seriftrg;
+
+html {
+    font-family: "Comic Sans MS", Sans-seriftrg;
 }
+
 head {
     float: left;
     top: 0;
 }
 
 header {
-
 }
 
 header nav {
@@ -26,7 +27,7 @@ header nav img {
     height: 73.43px;
 }
 
-header nav h1 {
+nav h1 {
     color: #ffffff;
     float: left;
     padding-left: 7rem;
@@ -59,7 +60,10 @@ main {
 }
 
 section {
-
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 figure img {
@@ -72,9 +76,10 @@ figure img {
     display: flex;
     flex-wrap: wrap;
 }
-figcaption{
+figure{
 
 }
+
 article {
 
 }

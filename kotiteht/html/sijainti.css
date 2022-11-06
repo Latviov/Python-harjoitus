@@ -2,16 +2,17 @@
     width: 80%;
     margin: auto;
 }
-html{
-    font-family: "Comic Sans MS",  Sans-seriftrg;
+
+html {
+    font-family: "Comic Sans MS", Sans-seriftrg;
 }
+
 head {
     float: left;
     top: 0;
 }
 
 header {
-
 }
 
 header nav {
@@ -26,7 +27,7 @@ header nav img {
     height: 73.43px;
 }
 
-header nav h1 {
+nav h1 {
     color: #ffffff;
     float: left;
     padding-left: 7rem;
@@ -59,26 +60,40 @@ main {
 }
 
 section {
-
-}
-
-figure img {
-    width: 100%;
-    max-width: 1024px;
-    height: auto;
-    border-radius: 8px;
-    margin-right: auto;
-    margin-left: auto;
+    padding-top: 5rem;
+    float: bottom;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
-figcaption{
 
+figure iframe{
+    width:600px;
+    height:500px;
 }
+
+.mapouter {
+    position: center;
+    float: bottom;
+    text-align: right;
+    height: 500px;
+    width: 600px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 600px;
+}
+
 article {
 
 }
-
+section h2{
+    text-align: left;
+}
 aside {
     background-color: gainsboro;
 }
