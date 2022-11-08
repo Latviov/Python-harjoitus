@@ -2,7 +2,7 @@ import requests
 
 
 base_url = "https://api.openweathermap.org/data/2.5/weather?"
-api_avain = "e76965d853e439fea2c006d1e2545908"
+api_avain = "05eaef0883239b20aa123dfd45fe01d8"
 kaupunki = input("Syötä kaupunki: ")
 
 url = base_url + "appid=" + api_avain + "&q=" + kaupunki + "&units=metric&lang=fi"
@@ -18,7 +18,7 @@ try:
               f"{kaupunki}\n"
               f"Lämpötila: {temp}°C\n"
               f"Sää: {description}")
-    elif response.status_code == 404:
+    if response.status_code == 404:
         print(f"Kaupunkia: {kaupunki}, ei löydy :(")
 
 except requests.exceptions.RequestException as e:
