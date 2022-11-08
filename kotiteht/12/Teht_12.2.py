@@ -2,7 +2,7 @@ import requests
 
 
 base_url = "https://api.openweathermap.org/data/2.5/weather?"
-api_avain = "05eaef0883239b20aa123dfd45fe01d8"
+api_avain = "3db299e3f46095bd463bc5270384d660"
 kaupunki = input("Syötä kaupunki: ")
 
 url = base_url + "appid=" + api_avain + "&q=" + kaupunki + "&units=metric&lang=fi"
